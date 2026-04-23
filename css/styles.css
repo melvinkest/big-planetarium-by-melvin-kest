@@ -1,0 +1,490 @@
+/* Universal Styling*/
+
+* {
+    font-family: 'Switzer-Variable', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background: black;
+    position: relative;
+    padding: 0 40px;
+    z-index: 1001;
+    width: auto;
+    height: 65px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo img {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: auto;
+    height: 36px;
+}
+
+nav a,
+nav button {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.explore-overlay {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgb(0, 0, 0);
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+    z-index: 1000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.explore-overlay.active {
+    height: auto;
+    max-height: 80vh;
+    padding-bottom: 20px;
+    overflow-y: auto;
+}
+
+.overlay-content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 40px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.main-explore {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.explore-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 10px;
+}
+
+.explore-item:hover {
+    background: #2c2c2c;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.explore-item h4 {
+    margin: 0;
+    font-size: 18px;
+    color: white;
+}
+
+.explore-item p {
+    margin: 5px 0 0;
+    color: #bababa;
+    font-size: 14px;
+}
+
+.explore-item i {
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.sidebar-lists {
+    display: flex;
+    gap: 40px;
+}
+
+.list-column h5 {
+    font-size: 12px;
+    color: #ffffff;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.list-column ul {
+    list-style: none;
+    padding: 0;
+    color: white;
+}
+
+.list-column li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.list-column li:hover {
+    color: #5fad41;
+}
+
+.external-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.explore-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    transition: all 0.2s ease, background 0.3s ease;
+}
+
+.explore-trigger.active {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+
+.planetarium-footer {
+    padding: 60px 40px 20px;
+    background-color: #000000;
+    color: #ffffff;
+    border-top: 1px solid rgb(61, 61, 61);
+}
+
+.footer-container {
+    display: grid;
+    max-width: 1200px;
+    margin: 0 15px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Auto-wrap columns */
+    gap: 30px;
+}
+
+.footer-column h3 {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    transition: color 0.2s;
+    padding: 6px 12px;
+    margin-left: -12px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.footer-column ul li a:hover {
+    background-color: #3b3b3b;
+    color: #ffffff;
+}
+
+.footer-divider {
+    border: 0;
+    border-top: 1px solid #fafafa;
+    margin: 40px 0 20px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 15px;
+    font-size: 13px;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .main-explore {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .hero-text {
+        top: 40%;
+    }
+    
+    .watch-button {
+        left: 50%;
+        bottom: 20%;
+    }
+
+    .section-one-content h1{
+        padding: 40px 20px; 
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    .section-one-content p{
+        padding: 40px 20px;
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+/* Milky Way: Our Home Galaxy Page*/
+
+.watch-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    background-color: #000000;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    position: absolute;
+    bottom: 180px;
+    left: 10%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.learn-more-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    background-color: #000000;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    position: absolute;
+    bottom: 60px; /* Distance from the bottom of the video */
+    left: 60px;   /* Distance from the left side to match your text padding */
+    z-index: 10;
+}
+
+.watch-button:hover,
+.learn-more-button:hover {
+    background-color: #fafafa;
+    border-color: #333333;
+    color: #000000;
+}
+
+.hero-section {
+    position: relative;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-top: 65px;
+    overflow: hidden;
+}
+
+.hero-video {
+    width: 100%;
+    filter: brightness(50%);
+    display: block;
+    height: 70vh;
+    object-fit: cover;
+    min-height: 660px;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 2;
+    left: 48%;
+    width: 90%;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: clamp(28px, 8vw, 48px);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.hero-text p {
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.section-one-content {
+    width: 100%;
+    align-items: center;
+    margin-bottom: 0;
+    gap: 0;
+    font-size: clamp(28px, 8vw, 48px);
+}
+
+.section-one-content p {
+    position: relative;
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    margin: 0;
+    text-align: left;
+    color: #000000;
+    font-size: 20px;
+}
+
+.section-one-content h1 {
+    font-size: 48px;
+    padding-left: 60px;
+    padding-top: 40px;
+}
+
+.sagittarius {
+    object-fit: cover;
+    display: block;
+    padding: 0;
+    width: 100%;
+    height: 70vh;
+    min-height: 400px;
+}
+
+.section-two {
+    overflow: hidden;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.section-two-video {
+    display: block;
+    width: 100%;
+    height: 70vh;
+    min-height: 400px;
+    object-fit: cover;
+}
+
+.section-two-text {
+    width: 100%;
+    padding: 60px;
+    color: #000000;
+    font-size: 20px;
+}
+
+.section-two-content {
+    width: 100%;
+    min-height: 500px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Milky Way: Planets Page*/
+
+.hero-image{
+    filter: brightness(25%);
+    display: block;
+    width: 100%;
+    height: 70vh;
+    min-height: 400px;
+    object-fit: cover;
+}
+
+.p2hero-text{
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.p2hero-section{
+    position: relative;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-top: 65px;
+    overflow: hidden;
+}
+
+.p2hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.p2hero-text p {
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.mini-section p{
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: left;
+    margin-left: 4%;
+    margin-top: 1%;
+    margin-bottom: 4%;
+}
+
+.mini-section h1{
+    font-size: clamp(28px, 8vw, 48px);
+    margin-bottom: 20px;
+    text-align: left;
+    margin-left: 4%;
+    margin-top: 4%;
+}
+
