@@ -1,12 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planet Earth</title>
+    <title>Earth: Our Home Planet</title>
+    <link href="/css/styles.css" rel="stylesheet">
+    <link href="/css/switzer.css" rel="stylesheet">
 </head>
+
 <body>
-    <h1></h1>
-    <p></p>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="/images/big-planetarium.png" alt="Milky Way Logo">
+        </div>
+        <nav>
+            <button id="exploreButton" class="explore-trigger"> Explore
+                <svg class="external-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M4 7a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1zm0 5a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1zm0 5a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1z"
+                        fill="#ffffff" />
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <div id="exploreMenu" class="explore-overlay">
+        <div class="overlay-content">
+            <div class="grid-container">
+
+                <div class="main-explore">
+                    <a href="/index.html" style="text-decoration: none;">
+                        <div class="explore-item">
+                            <div>
+                                <h4>The Milky Way</h4>
+                                <p>Learn about our home galaxy.</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" style="text-decoration: none;">
+                        <div class="explore-item">
+                            <div>
+                                <h4>The Solar System</h4>
+                                <p>Learn about the planets around our Sun.</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" style="text-decoration: none;">
+                        <div class="explore-item">
+                            <div>
+                                <h4>The Universe</h4>
+                                <p>Explore the vastness of space and learn about celestial objects.</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/pages/planet-earth.html" style="text-decoration: none;">
+                        <div class="explore-item">
+                            <div>
+                                <h4>Earth</h4>
+                                <p>Learn about our home planet.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="sidebar-lists">
+                    <div class="list-column">
+                        <h5>LEARN MORE</h5>
+                        <ul>
+                            <li href="/pages/milky-way-planets.html">Planets</li>
+                            <li>Stars</li>
+                            <li>Galaxies</li>
+                            <li>Universes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="hero-section">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="/videos/earth-zooming.mp4" type="video/mp4">
+        </video>
+        <div class="hero-text">
+            <h1>Earth: The Blue Marble</h1>
+            <p>Earth is more than just our home, it is a complex, self-regulating miracle of physics and
+                biology.<br><br>
+                Located roughly 150 million kilometers from the Sun, it sits in a region of space where temperatures are
+                just right for water to remain in liquid form. This "habitable zone" is the foundation of every
+                biological process we know.
+            </p>
+        </div>
+    </section>
+    <div class="section-one">
+        <section class="section-one-content">
+            <h1 class="overview">
+                A Protective Shield: The Magnetosphere
+            </h1>
+            <p class="section-one-text">One of Earth’s most vital features is invisible to the naked eye. Deep inside
+                our planet, a spinning outer core of liquid iron and nickel acts as a massive dynamo, generating a
+                powerful magnetic field. This magnetosphere stretches far into space, acting as a literal shield that
+                deflects the "solar wind", a stream of high-energy particles from the Sun. <br><br>Without this
+                protection, our
+                atmosphere would have been stripped away eons ago, leaving Earth as a barren, radiated desert.
+
+            </p>
+
+            <img src="/images/magnetosphere.jpg" class="sagittarius">
+        </section>
+    </div>
+
+    <div class="section-two">
+        <section class="section-two-content">
+            <h1 class="overview-two">The Engine of Change: Plate Tectonics</h1>
+            <p class="section-two-text">Earth is the only planet in the solar system known to have an active outer crust
+                broken into massive plates. These plates are constantly moving, clashing, and sliding beneath one
+                another in a process called plate tectonics. This isn't just about earthquakes and volcanoes; it is a
+                vital "recycling system" for the planet.<br><br> By pulling carbon from the atmosphere into the mantle
+                and
+                releasing it back through volcanic activity, Earth regulates its own temperature over millions of years,
+                preventing it from becoming an icebox or a furnace.<br><br>
+            </p>
+            <h1 class="overview-three">The Atmosphere: A Precision Mix</h1>
+            <p class="section-two-text">
+                Our atmosphere is a unique cocktail of 78% nitrogen, 21% oxygen, and 1% trace gases. Unlike the
+                suffocating carbon dioxide atmospheres of Venus or Mars, Earth's air was transformed over billions of
+                years by life itself. Early cyanobacteria began pumping oxygen into the environment, paving the way for
+                complex animals. This layer also features the Ozone Layer, which filters out the Sun’s harmful
+                ultraviolet (UV) radiation, making the surface safe for life to flourish.<br><br>
+            </p>
+            <h1 class="overview-four">The Hydrosphere: The Water Cycle</h1>
+            <p class="section-two-text" style="padding-bottom: 40px;">
+                Earth is the only place in the universe where we have confirmed the presence of stable, liquid water on
+                the surface. Covering roughly 71% of the planet, our oceans act as a massive heat sink, absorbing solar
+                energy and distributing it around the globe through deep-sea currents.<br><br> This system, combined with the
+                evaporation and precipitation of the water cycle, creates the weather patterns that sustain forests,
+                grasslands, and civilizations alike.
+            </p>
+            <img src="/images/earth-atmosphere.jpg" class="section-two-img">
+        </section>
+    </div>
+    <script src="/script.js"></script>
 </body>
-</html>
+
+<footer class="planetarium-footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>DISCOVER</h3>
+            <ul>
+                <li><a href="#">Media Resources</a></li>
+                <li><a href="#">Newsletters</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <hr class="footer-divider">
+
+    <div class="footer-bottom">
+        <p>© Big Planetarium by <strong> Melvin Kest</strong>.</p>
+    </div>
+</footer>

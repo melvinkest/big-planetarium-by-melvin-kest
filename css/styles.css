@@ -1,5 +1,3 @@
-/* Universal Styling*/
-
 * {
     font-family: 'Switzer-Variable', sans-serif;
     margin: 0;
@@ -7,17 +5,19 @@
     box-sizing: border-box;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
     background: black;
-    position: relative;
-    padding: 0 40px;
+    position: fixed;
+    padding: 0 5%;
     z-index: 1001;
-    width: auto;
     height: 65px;
     align-items: center;
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -49,17 +49,16 @@ nav button {
     top: 65px;
     left: 0;
     width: 100%;
-    height: 0;
+    max-height: 0;
     background: rgb(0, 0, 0);
     overflow: hidden;
-    transition: height 0.3s ease-in-out;
+    transition: max-height 0.3s ease-in-out;
     z-index: 1000;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .explore-overlay.active {
-    height: auto;
-    max-height: 80vh;
+    max-height: 400px;
     padding-bottom: 20px;
     overflow-y: auto;
 }
@@ -67,7 +66,7 @@ nav button {
 .overlay-content {
     max-width: 1200px;
     margin: 40px auto;
-    padding: 0 40px;
+    padding: 0 5%;
 }
 
 .grid-container {
@@ -106,12 +105,6 @@ nav button {
     margin: 5px 0 0;
     color: #bababa;
     font-size: 14px;
-}
-
-.explore-item i {
-    font-size: 24px;
-    padding: 10px;
-    border-radius: 10px;
 }
 
 .sidebar-lists {
@@ -168,7 +161,7 @@ nav button {
 }
 
 .planetarium-footer {
-    padding: 60px 40px 20px;
+    padding: 60px 5% 20px;
     background-color: #000000;
     color: #ffffff;
     border-top: 1px solid rgb(61, 61, 61);
@@ -177,8 +170,8 @@ nav button {
 .footer-container {
     display: grid;
     max-width: 1200px;
-    margin: 0 15px;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Auto-wrap columns */
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 30px;
 }
 
@@ -203,7 +196,6 @@ nav button {
     text-decoration: none;
     color: #ffffff;
     font-size: 14px;
-    transition: color 0.2s;
     padding: 6px 12px;
     margin-left: -12px;
     transition: background-color 0.2s ease, color 0.2s ease;
@@ -227,10 +219,281 @@ nav button {
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
-    margin: 0 15px;
+    margin: 0 auto;
     font-size: 13px;
 }
 
+.watch-button,
+.learn-more-button,
+.learn-more-p2 {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #000000;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+    z-index: 10;
+}
+
+.watch-button:hover,
+.learn-more-button:hover,
+.learn-more-p2:hover {
+    background-color: #fafafa;
+    border-color: #333333;
+    color: #000000;
+}
+.hero-section > a,
+.learn-more-link {
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+}
+
+.hero-section {
+    position: relative;
+    color: rgb(255, 255, 255);
+    margin-top: 65px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 10%; 
+    padding-right: 5%;
+    height: 92vh;
+    min-height: 500px;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: brightness(50%);
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-size: clamp(32px, 6vw, 48px);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.hero-text p {
+    font-size: clamp(16px, 3vw, 20px);
+    line-height: 1.5;
+    text-align: left;
+}
+
+.section-one-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 5%;
+}
+
+.overview,
+.overview-two,
+.overview-three,
+.overview-four {
+    font-size: clamp(28px, 5vw, 36px);
+    margin-bottom: 20px;
+}
+
+.section-one-text,
+.section-two-text {
+    width: 100%;
+    color: #000000;
+    font-size: clamp(16px, 2.5vw, 20px);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.sagittarius,
+.section-two-video,
+.section-two-img {
+    width: 100%;
+    height: 60vh;
+    min-height: 350px;
+    object-fit: cover;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.section-two {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.section-two-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 5%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.p2hero-section {
+    position: relative;
+    color: rgb(255, 255, 255);
+    margin-top: 65px;
+    overflow: hidden;
+    height: 70vh;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 10%;
+    padding-right: 5%;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: brightness(25%);
+    object-fit: cover;
+    z-index: 1;
+}
+
+.p2hero-text {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 900px;
+    text-align: left;
+}
+
+.p2hero-text h1 {
+    font-size: clamp(28px, 6vw, 48px);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.p2hero-text p {
+    font-size: clamp(16px, 3vw, 20px);
+    line-height: 1.6;
+    text-align: left;
+}
+
+.mini-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 5%;
+    text-align: left;
+    color: #000000;
+}
+
+.mini-section h1 {
+    font-size: clamp(28px, 5vw, 48px);
+    margin-bottom: 20px;
+}
+
+.mini-section p {
+    font-size: clamp(16px, 2.5vw, 20px);
+    line-height: 1.6;
+}
+
+.p2section-one,
+.p2section-two,
+.p2section-three,
+.p2section-four,
+.p2section-five,
+.p2section-six {
+    position: relative;
+    min-height: 70vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: #000;
+    padding: 40px 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.p2section-one-content,
+.p2section-two-content,
+.p2section-three-content,
+.p2section-four-content,
+.p2section-five-content,
+.p2section-six-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 800px;
+    margin: 0;
+}
+
+.p2section-one-content h1,
+.p2section-two-content h1,
+.p2section-three-content h1,
+.p2section-four-content h1,
+.p2section-five-content h1,
+.p2section-six-content h1 {
+    color: #ffffff;
+    font-size: clamp(28px, 5vw, 48px);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.p2section-one-content p,
+.p2section-two-content p,
+.p2section-three-content p,
+.p2section-four-content p,
+.p2section-five-content p,
+.p2section-six-content p {
+    color: #ffffff;
+    font-size: clamp(16px, 2.5vw, 20px);
+    line-height: 1.6;
+    text-align: left;
+}
+
+.earth,
+.jupiter,
+.saturn,
+.proxima,
+.cancri,
+.hd189733b {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(25%);
+    z-index: 1;
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
     .grid-container {
         grid-template-columns: 1fr;
@@ -241,250 +504,16 @@ nav button {
         grid-template-columns: 1fr;
     }
 
-    .navbar {
-        padding: 0 20px;
-    }
-
-    .hero-text {
-        top: 40%;
-    }
-    
-    .watch-button {
-        left: 50%;
-        bottom: 20%;
-    }
-
-    .section-one-content h1{
-        padding: 40px 20px; 
-        font-size: 18px;
-        line-height: 1.6;
-    }
-
-    .section-one-content p{
-        padding: 40px 20px;
-        font-size: 18px;
-        line-height: 1.6;
-    }
-
     .footer-bottom {
         flex-direction: column;
         text-align: center;
         gap: 10px;
     }
+    
+    .hero-section, .p2hero-section,
+    .p2section-one, .p2section-two, .p2section-three,
+    .p2section-four, .p2section-five, .p2section-six {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
 }
-
-/* Milky Way: Our Home Galaxy Page*/
-
-.watch-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    color: #ffffff;
-    background-color: #000000;
-    border: 1px solid #e6e6e6;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    position: absolute;
-    bottom: 180px;
-    left: 10%;
-    transform: translateX(-50%);
-    z-index: 10;
-}
-
-.learn-more-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    color: #ffffff;
-    background-color: #000000;
-    border: 1px solid #e6e6e6;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    position: absolute;
-    bottom: 60px; /* Distance from the bottom of the video */
-    left: 60px;   /* Distance from the left side to match your text padding */
-    z-index: 10;
-}
-
-.watch-button:hover,
-.learn-more-button:hover {
-    background-color: #fafafa;
-    border-color: #333333;
-    color: #000000;
-}
-
-.hero-section {
-    position: relative;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    margin-top: 65px;
-    overflow: hidden;
-}
-
-.hero-video {
-    width: 100%;
-    filter: brightness(50%);
-    display: block;
-    height: 70vh;
-    object-fit: cover;
-    min-height: 660px;
-}
-
-.hero-text {
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    border-radius: 10px;
-    z-index: 2;
-    left: 48%;
-    width: 90%;
-    text-align: center;
-}
-
-.hero-text h1 {
-    font-size: clamp(28px, 8vw, 48px);
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.hero-text p {
-    font-size: 20px;
-    line-height: 1.5;
-    text-align: left;
-}
-
-.section-one-content {
-    width: 100%;
-    align-items: center;
-    margin-bottom: 0;
-    gap: 0;
-    font-size: clamp(28px, 8vw, 48px);
-}
-
-.section-one-content p {
-    position: relative;
-    width: 100%;
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-top: 20px;
-    padding-bottom: 60px;
-    margin: 0;
-    text-align: left;
-    color: #000000;
-    font-size: 20px;
-}
-
-.section-one-content h1 {
-    font-size: 48px;
-    padding-left: 60px;
-    padding-top: 40px;
-}
-
-.sagittarius {
-    object-fit: cover;
-    display: block;
-    padding: 0;
-    width: 100%;
-    height: 70vh;
-    min-height: 400px;
-}
-
-.section-two {
-    overflow: hidden;
-    width: 100%;
-    background-color: #ffffff;
-}
-
-.section-two-video {
-    display: block;
-    width: 100%;
-    height: 70vh;
-    min-height: 400px;
-    object-fit: cover;
-}
-
-.section-two-text {
-    width: 100%;
-    padding: 60px;
-    color: #000000;
-    font-size: 20px;
-}
-
-.section-two-content {
-    width: 100%;
-    min-height: 500px;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    position: relative;
-}
-
-/* Milky Way: Planets Page*/
-
-.hero-image{
-    filter: brightness(25%);
-    display: block;
-    width: 100%;
-    height: 70vh;
-    min-height: 400px;
-    object-fit: cover;
-}
-
-.p2hero-text{
-    position: absolute;
-    top: 50%;
-    left: 35%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    border-radius: 10px;
-    z-index: 2;
-}
-
-.p2hero-section{
-    position: relative;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    margin-top: 65px;
-    overflow: hidden;
-}
-
-.p2hero-text h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.p2hero-text p {
-    font-size: 20px;
-    line-height: 1.5;
-    text-align: left;
-}
-
-.mini-section p{
-    font-size: 20px;
-    line-height: 1.5;
-    text-align: left;
-    margin-left: 4%;
-    margin-top: 1%;
-    margin-bottom: 4%;
-}
-
-.mini-section h1{
-    font-size: clamp(28px, 8vw, 48px);
-    margin-bottom: 20px;
-    text-align: left;
-    margin-left: 4%;
-    margin-top: 4%;
-}
-
